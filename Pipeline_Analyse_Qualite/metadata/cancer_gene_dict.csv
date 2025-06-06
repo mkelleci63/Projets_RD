@@ -1,0 +1,176 @@
+Cancer	Gene
+Breast	ATM
+Breast	BRCA1
+Breast	BRCA2
+Breast	CD274
+Breast	ERBB2
+Breast	ESR1
+Breast	NBN
+Breast	NF1
+Breast	NTRK1
+Breast	NTRK2
+Breast	NTRK3
+Breast	PALB2
+Breast	PIK3CA
+Breast	PTEN
+Breast	RAD51C
+Breast	RAD51D
+Breast	STK11
+Breast	TP53
+CNS	APC
+CNS	ATRX
+CNS	BRAF
+CNS	CDKN2A
+CNS	CDKN2B
+CNS	EGFR
+CNS	H3F3A
+CNS	HIST1H3B
+CNS	HIST1H3C
+CNS	IDH1
+CNS	IDH2
+CNS	MYCN
+CNS	NTRK1
+CNS	NTRK2
+CNS	NTRK3
+CNS	PTCH1
+CNS	PTEN
+CNS	TERT
+CNS	TP53
+Colorectal	BRAF
+Colorectal	ERBB2
+Colorectal	KRAS
+Colorectal	MLH1
+Colorectal	MSH2
+Colorectal	MSH6
+Colorectal	NRAS
+Colorectal	NTRK1
+Colorectal	NTRK2
+Colorectal	NTRK3
+Colorectal	PMS2
+Lung	ALK
+Lung	BRAF
+Lung	CD274
+Lung	EGFR
+Lung	ERBB2
+Lung	KRAS
+Lung	MET
+Lung	NTRK1
+Lung	NTRK2
+Lung	NTRK3
+Lung	NUTM1
+Lung	RET
+Lung	ROS1
+Melanoma	BAP1
+Melanoma	BRAF
+Melanoma	BRCA2
+Melanoma	CDK4
+Melanoma	CDKN2A
+Melanoma	EIF1AX
+Melanoma	GNA11
+Melanoma	GNAQ
+Melanoma	KIT
+Melanoma	MITF
+Melanoma	NF1
+Melanoma	NRAS
+Melanoma	NTRK1
+Melanoma	NTRK2
+Melanoma	NTRK3
+Melanoma	PALB2
+Melanoma	PTEN
+Melanoma	ROS1
+Melanoma	SF3B1
+Melanoma	TERT
+Ovarian	ATM
+Ovarian	BRCA1
+Ovarian	BRCA2
+Ovarian	BRIP1
+Ovarian	FOXL2
+Ovarian	MLH1
+Ovarian	MSH2
+Ovarian	NBN
+Ovarian	NTRK1
+Ovarian	NTRK2
+Ovarian	NTRK3
+Ovarian	PALB2
+Ovarian	RAD51C
+Ovarian	RAD51D
+Ovarian	STK11
+Prostate	AR
+Prostate	ATM
+Prostate	ATR
+Prostate	BARD1
+Prostate	BRCA1
+Prostate	BRCA2
+Prostate	BRIP1
+Prostate	CDK12
+Prostate	CDKN2A
+Prostate	CDKN2B
+Prostate	CHEK1
+Prostate	CHEK2
+Prostate	EPCAM
+Prostate	FANCA
+Prostate	FANCL
+Prostate	FGFR2
+Prostate	FGFR3
+Prostate	GEN1
+Prostate	MLH1
+Prostate	MSH2
+Prostate	MSH6
+Prostate	MUTYH
+Prostate	NBN
+Prostate	NTRK1
+Prostate	NTRK2
+Prostate	NTRK3
+Prostate	PALB2
+Prostate	PMS2
+Prostate	PPP2R2A
+Prostate	PTEN
+Prostate	RAD51B
+Prostate	RAD51C
+Prostate	RAD51D
+Prostate	RAD54L
+Thyroid	BRAF
+Thyroid	HRAS
+Thyroid	KRAS
+Thyroid	NRAS
+Thyroid	NTRK1
+Thyroid	NTRK2
+Thyroid	NTRK3
+Thyroid	PAX8
+Thyroid	PPARG
+Thyroid	PTEN
+Thyroid	RET
+Thyroid	TERT
+Uterine and Cervical	ALK
+Uterine and Cervical	ATRX
+Uterine and Cervical	BCOR
+Uterine and Cervical	BRCA2
+Uterine and Cervical	CD274
+Uterine and Cervical	CDK4
+Uterine and Cervical	DICER1
+Uterine and Cervical	ERBB2
+Uterine and Cervical	ESR1
+Uterine and Cervical	FGFR2
+Uterine and Cervical	FOXO1
+Uterine and Cervical	KMT2C
+Uterine and Cervical	MDM2
+Uterine and Cervical	MLH1
+Uterine and Cervical	MSH2
+Uterine and Cervical	MSH6
+Uterine and Cervical	NCOA3
+Uterine and Cervical	NTRK1
+Uterine and Cervical	NTRK2
+Uterine and Cervical	NTRK3
+Uterine and Cervical	PAX3
+Uterine and Cervical	PAX7
+Uterine and Cervical	PGR
+Uterine and Cervical	PIK3CA
+Uterine and Cervical	PMS2
+Uterine and Cervical	POLE
+Uterine and Cervical	PTEN
+Uterine and Cervical	RAD51B
+Uterine and Cervical	SMARCA4
+Uterine and Cervical	SUZ12
+Uterine and Cervical	TERT
+Uterine and Cervical	TFE3
+Uterine and Cervical	TP53
