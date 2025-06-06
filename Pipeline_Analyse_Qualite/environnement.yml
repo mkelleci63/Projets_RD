@@ -1,0 +1,24 @@
+name: bam_analysis
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.9.21
+  - pip
+  - pysam
+  - setuptools
+  - wheel
+  - samtools=1.21
+  - htslib=1.21
+  - libdeflate
+  - libgcc-ng
+  - libstdcxx-ng
+  - numpy
+  - pandas
+  - xlsxwriter
+  - beautifulsoup4
+  - openpyxl
+  - ijson
+  - pip:
+      - xlsx2html
