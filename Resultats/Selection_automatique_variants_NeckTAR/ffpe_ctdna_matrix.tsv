@@ -1,0 +1,9 @@
+							FFPE	FFPE	ctDNA	ctDNA
+Hugo_Symbol	Chromosome	Start_Position	End_Position	HGVSc	HGVSp	Consequence	Variant_Frequencies	Total_Depth	Variant_Frequencies	Total_Depth
+KDR	chr4	55110780	55110780	NM_002253.2:c.977-13dup	.	intron_variant	0.6818	22	0.6434	559
+ROS1	chr6	117356920	117356920	NM_002944.2:c.3855-5T>C	.	splice_region_variant	0.9881	84	1	1285
+SYNE1	chr6	152218437	152218438	NM_033071.3:c.21832-35del	.	intron_variant	0.64	25	0.4577	535
+COL22A1	chr8	138877729	138877729	NM_152888.2:c.658+21T>C	.	intron_variant	1	214	0.9996	2785
+PLEC	chr8	143925474	143925474	NM_201384.2:c.4455T>G	NM_201384.2:c.4455T>G(p.(Ala1485=))	synonymous_variant	0.5779	244	0.2753	1413
+KRT5	chr12	52519122	52519125	NM_000424.3:c.591_594delinsAACA	NP_000415.2:p.(Asp197Glu)	missense_variant	0.5739	176	0.5034	2936
+TP53	chr17	7676325	7676341	NM_000546.5:c.96+41_97-54del	.	intron_variant	0.9767	43	0.964	1335
