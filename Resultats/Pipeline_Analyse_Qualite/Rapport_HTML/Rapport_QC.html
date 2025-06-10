@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Rapport QC</title>
+  <style>
+    body { margin:0; padding:0; font-family:Arial,Helvetica,sans-serif }
+    #contentFrame { width:100%; height:calc(100vh - 80px); border:none }
+    #container { position:fixed; bottom:0; width:100%; background:#f0f0f0;
+                   padding:15px; text-align:center; box-shadow:0 -2px 5px rgba(0,0,0,.2) }
+    button, select { font-size:16px; font-weight:bold; padding:10px 20px; margin:5px;
+                     border:0; border-radius:5px; background:#d3d3d3; cursor:pointer }
+    button:hover, select:hover { background:#c0c0c0 }
+    select { appearance:button; text-align-last:center; min-width:150px }
+  </style>
+</head>
+<body>
+  <!-- Volet d'affichage -->
+  <iframe id="contentFrame" src="MetricsComparison.html"></iframe>
+
+  <!-- Barre de navigation -->
+  <div id="container">
+    <!-- Bouton Infos QC -->
+    <button data-page="MetricsComparison">Informations qualité run</button>
+
+    <!-- Menu Variants -->
+    <select id="variantSelect">
+      <option value="">Variants</option>
+            <option value="24H2193-2-6-0">24H2193-2-6-0</option>
+    </select>
+
+    <!-- Menu Low coverage -->
+    <select id="lowCoverageSelect">
+      <option value="">Low coverage 50X</option>
+            <option value="24H2193D-2-6-0">24H2193D-2-6-0</option>
+            <option value="24H2193R-2-6-0">24H2193R-2-6-0</option>
+    </select>
+
+    <!-- Bouton Duplicats -->
+    <button data-page="Duplicats">Détails duplicats</button>
+  </div>
+
+  <script>
+    // Mapping clé->fichier
+    const pages = {"MetricsComparison": "MetricsComparison.html", "Duplicats": "Resultats_duplicats.html", "24H2193-2-6-0": "24H2193-2-6-0_CombinedVariantOutput_CombinedVariantOutput_DNA.html", "24H2193R-2-6-0": "24H2193R-2-6-0_coverage.html", "24H2193D-2-6-0": "24H2193D-2-6-0_coverage.html"};
+    const frame = document.getElementById('contentFrame');
+
+    function showPage(key) {
+      const url = pages[key];
+      if (url) frame.src = url;
+    }
+
+    // Evenements
+    document.querySelectorAll('button[data-page]').forEach(btn =>
+      btn.addEventListener('click', () => showPage(btn.dataset.page))
+    );
+
+    document.getElementById('variantSelect').addEventListener('change', e => {
+      if (e.target.value) showPage(e.target.value);
+      e.target.selectedIndex = 0;
+    });
+
+    document.getElementById('lowCoverageSelect').addEventListener('change', e => {
+      if (e.target.value) showPage(e.target.value);
+      e.target.selectedIndex = 0;
+    });
+  </script>
+</body>
+</html>

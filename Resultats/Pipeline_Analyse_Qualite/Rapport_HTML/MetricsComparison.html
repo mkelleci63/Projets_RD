@@ -1,0 +1,199 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Metrics Comparison</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .legend {
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+        .legend h3 {
+            margin: 0;
+        }
+        .legend-item {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+            border: 1px solid black;
+        }
+        .table-container {
+            overflow-y: auto;
+            /* Le padding-bottom sera ajusté via JS pour réserver l'espace du container du bas */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+        /* La ligne d'en-tête d'origine reste inchangée */
+        thead th {
+            background-color: #ADD8E6;
+        }
+        td.metric-name {
+            background-color: #ADD8E6;
+            font-weight: bold;
+            position: relative;
+        }
+        td.metric-name small {
+            display: block;
+            font-size: 15px;
+            font-weight: normal;
+        }
+        /* Style pour le rond vert */
+        .green-circle {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: green;
+            border-radius: 50%;
+        }
+        /* Container fixe en bas réduit */
+        #bottom-info {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 5px 10px;
+            border-top: 1px solid black;
+            background-color: #f9f9f9;
+            font-size: 0.9em;
+        }
+        #bottom-info ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        #bottom-info li {
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="legend">
+        <h3>Légende des sections :</h3>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background-color:#FFCCCC"></span>Run QC Metrics
+        </div>
+    
+        <div class="legend-item">
+            <span class="legend-color" style="background-color:#CCE5FF"></span>DNA Library QC Metrics
+        </div>
+    
+        <div class="legend-item">
+            <span class="legend-color" style="background-color:#CCFFCC"></span>DNA Library QC Metrics for Small Variant Calling and TMB
+        </div>
+    
+        <div class="legend-item">
+            <span class="legend-color" style="background-color:#FFFFCC"></span>DNA Library QC Metrics for MSI
+        </div>
+    
+        <div class="legend-item">
+            <span class="legend-color" style="background-color:#FFCCFF"></span>DNA Library QC Metrics for CNV
+        </div>
+    
+        <div class="legend-item">
+            <span class="legend-color" style="background-color:#FFE5CC"></span>RNA Library QC Metrics
+        </div>
+    
+        <div class="legend-item">
+            <span class="legend-color" style="background-color:#CCFFFF"></span>DNA Expanded Metrics
+        </div>
+    
+        <div class="legend-item">
+            <span class="legend-color" style="background-color:#E5CCFF"></span>RNA Expanded Metrics
+        </div>
+    
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr><th>Metric</th><th>24H2193-2-6-0</th><th>24H4857-2-6-0</th><th>24R2554-2-6-0</th><th>Value</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class='metric-name' title='Percentage of Read 1 reads with quality score ≥ 30' style='background-color:#FFCCCC'>PCT_Q30_R1 (%)<small>LSL: 80.00, USL: N/A</small></td><td title='Pas de donnée'>NA</td><td title='Pas de donnée'>NA</td><td title='Pas de donnée'>NA</td><td title='Valeur conforme' style='background-color:white;'>87.6</td></tr><tr><td class='metric-name' title='Percentage of Read 2 reads with quality score ≥ 30' style='background-color:#FFCCCC'>PCT_Q30_R2 (%)<small>LSL: 80.00, USL: N/A</small></td><td title='Pas de donnée'>NA</td><td title='Pas de donnée'>NA</td><td title='Pas de donnée'>NA</td><td title='Valeur conforme' style='background-color:white;'>85.7</td></tr><tr><td class='metric-name' title='Total percentage of reads passing filter' style='background-color:#FFCCCC'>PCT_PF_READS (%)<small>LSL: 80.00, USL: N/A</small></td><td title='Pas de donnée'>NA</td><td title='Pas de donnée'>NA</td><td title='Pas de donnée'>NA</td><td title='Valeur conforme' style='background-color:white;'>88.8</td></tr><tr><td class='metric-name' title='The contamination score is based on VAF distribution of SNPs' style='background-color:#CCE5FF'>CONTAMINATION_SCORE (NA)<small>LSL: 0.00, USL: 1457.00</small></td><td title='Valeur conforme' style='background-color:white;'>737.0</td><td title='Valeur conforme' style='background-color:white;'>4.0</td><td title='Valeur conforme' style='background-color:white;'>300.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percent exon bases with 50x fragment coverage' style='background-color:#CCFFCC'>PCT_EXON_50X (%)<small>LSL: 90.00, USL: N/A</small></td><td title='Valeur conforme' style='background-color:white;'>99.6</td><td title='Valeur conforme' style='background-color:white;'>99.7</td><td title='Valeur conforme' style='background-color:white;'>99.7</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Median exon fragment coverage across all exon bases' style='background-color:#CCFFCC'>MEDIAN_EXON_COVERAGE (Count)<small>LSL: 150.00, USL: N/A</small></td><td title='Valeur conforme' style='background-color:white;'>619.0</td><td title='Valeur conforme' style='background-color:white;'>742.0</td><td title='Valeur conforme' style='background-color:white;'>549.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='The median fragment length in the sample' style='background-color:#CCFFCC'>MEDIAN_INSERT_SIZE (bp)<small>LSL: 70.00, USL: N/A</small></td><td title='Valeur conforme' style='background-color:white;'>134.0</td><td title='Valeur conforme' style='background-color:white;'>132.0</td><td title='Valeur conforme' style='background-color:white;'>128.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='The number of MSI sites usable for MSI calling' style='background-color:#FFFFCC'>USABLE_MSI_SITES (Count)<small>LSL: 40.00, USL: N/A</small></td><td title='Valeur conforme' style='background-color:white;'>123.0</td><td title='Valeur conforme' style='background-color:white;'>121.0</td><td title='Valeur conforme' style='background-color:white;'>122.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='The median raw bin count per CNV target' style='background-color:#FFCCFF'>MEDIAN_BIN_COUNT_CNV_TARGET (Count)<small>LSL: 1.00, USL: N/A</small></td><td title='Valeur conforme' style='background-color:white;'>7.0</td><td title='Valeur conforme' style='background-color:white;'>7.9</td><td title='Valeur conforme' style='background-color:white;'>6.4</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='GENE_SCALED_MAD (Count)' style='background-color:#FFCCFF'>GENE_SCALED_MAD (Count)<small>LSL: 0.00, USL: 0.13</small></td><td title='Valeur conforme' style='background-color:white;'>0.077</td><td title='Valeur conforme' style='background-color:white;'>0.045</td><td title='Valeur conforme' style='background-color:white;'>0.054</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='The median CV for all genes with median coverage > 500x. Higher CV indicates possible issues lors de la préparation de la librairie.' style='background-color:#FFE5CC'>MEDIAN_CV_GENE_500X (NA)<small>LSL: 0.00, USL: 0.93</small></td><td title='Valeur conforme' style='background-color:white;'>0.53</td><td title='Valeur conforme' style='background-color:white;'>0.56</td><td title='Valeur conforme' style='background-color:white;'>0.62</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='The median fragment length in the sample' style='background-color:#FFE5CC'>MEDIAN_INSERT_SIZE (Count)<small>LSL: 80.00, USL: N/A</small></td><td title='Valeur conforme' style='background-color:white;'>122.0</td><td title='Valeur conforme' style='background-color:white;'>119.0</td><td title='Valeur conforme' style='background-color:white;'>114.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='The total number of reads that map to the target regions' style='background-color:#FFE5CC'>TOTAL_ON_TARGET_READS (Count)<small>LSL: 9000000.00, USL: N/A</small></td><td title='Valeur conforme' style='background-color:white;'>23210163.0</td><td title='Valeur conforme' style='background-color:white;'>26152604.0</td><td title='Valeur conforme' style='background-color:white;'>22382578.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of bases soft-clipped during alignement' style='background-color:#CCFFFF'>PCT_SOFT_CLIPPED_BASES (%)<small>Global: Inf: 2.17, Sup: 19.68</small></td><td title='Valeur conforme' style='background-color:white;'>4.15</td><td title='Valeur conforme' style='background-color:white;'>5.22</td><td title='Valeur conforme' style='background-color:white;'>4.91</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of reads with valid UMI' style='background-color:#CCFFFF'>PCT_USABLE_UMI_READS (%)<small>Global: Inf: 99.70, Sup: 99.90</small></td><td title='Valeur conforme' style='background-color:white;'>99.9</td><td title='Valeur conforme' style='background-color:white;'>99.9</td><td title='Valeur conforme' style='background-color:white;'>99.9</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of target bases with 100X coverage' style='background-color:#CCFFFF'>PCT_TARGET_100X (%)<small>Global: Inf: 13.28, Sup: 99.30</small></td><td title='Valeur conforme' style='background-color:white;'>98.2</td><td title='Valeur conforme' style='background-color:white;'>99.2</td><td title='Valeur conforme' style='background-color:white;'>98.8</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of target bases with 50X coverage' style='background-color:#CCFFFF'>PCT_TARGET_50X (%)<small>Global: Inf: 82.56, Sup: 99.60</small></td><td title='Valeur conforme' style='background-color:white;'>99.0</td><td title='Valeur conforme' style='background-color:white;'>99.6</td><td title='Valeur conforme' style='background-color:white;'>99.3</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of reads overlapping les régions cibles' style='background-color:#CCFFFF'>PCT_READ_ENRICHMENT (%)<small>Global: Inf: 66.08, Sup: 87.40</small></td><td title='Valeur conforme' style='background-color:white;'>87.2</td><td title='Valeur conforme' style='background-color:white;'>85.7</td><td title='Valeur conforme' style='background-color:white;'>86.9</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Mean size of UMI families' style='background-color:#CCFFFF'>MEAN_FAMILY_SIZE (Count)<small>LSL: 2.00, USL: 5.00</small></td><td title='Valeur conforme' style='background-color:white;'>3.4</td><td title='Valeur conforme' style='background-color:white;'>3.4</td><td title='Valeur conforme' style='background-color:white;'>4.2</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of reads alignées en deux parties' style='background-color:#CCFFFF'>PCT_CHIMERIC_READS (%)<small>Global: Inf: 0.14, Sup: 3.99</small></td><td title='Valeur conforme' style='background-color:white;'>0.37</td><td title='Valeur conforme' style='background-color:white;'>2.5</td><td title='Valeur conforme' style='background-color:white;'>1.59</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of target bases with coverage ≥ 0.4x the mean' style='background-color:#CCFFFF'>PCT_TARGET_0.4X_MEAN (%)<small>Global: Inf: 72.17, Sup: 96.70</small></td><td title='Valeur conforme' style='background-color:white;'>87.5</td><td title='Valeur conforme' style='background-color:white;'>95.3</td><td title='Valeur conforme' style='background-color:white;'>95.1</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of target bases with 250X fragment coverage.' style='background-color:#CCFFFF'>PCT_TARGET_250X (%)<small>Global: Inf: 0.60, Sup: 98.10</small></td><td title='Valeur conforme' style='background-color:white;'>88.7</td><td title='Valeur conforme' style='background-color:white;'>96.4</td><td title='Valeur conforme' style='background-color:white;'>95.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Mean depth across all target loci' style='background-color:#CCFFFF'>MEAN_TARGET_COVERAGE (Count)<small>Global: Inf: 71.81, Sup: 1131.51</small></td><td title='Valeur conforme' style='background-color:white;'>654.0</td><td title='Valeur conforme' style='background-color:white;'>695.9</td><td title='Valeur conforme' style='background-color:white;'>615.8</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Median depth across all target loci' style='background-color:#CCFFFF'>MEDIAN_TARGET_COVERAGE (Count)<small>Global: Inf: 69.50, Sup: 1090.20</small></td><td title='Valeur conforme' style='background-color:white;'>620.0</td><td title='Valeur conforme' style='background-color:white;'>697.0</td><td title='Valeur conforme' style='background-color:white;'>531.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Total number of reads passing filter' style='background-color:#CCFFFF'>TOTAL_PF_READS (Count)<small>Global: Inf: 13478754.40, Sup: 149998014.90</small></td><td title='Valeur conforme' style='background-color:white;'>107870320.0</td><td title='Valeur conforme' style='background-color:white;'>115251488.0</td><td title='Valeur conforme' style='background-color:white;'>128689254.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Proportion of aligned reads that pass QC' style='background-color:#CCFFFF'>PCT_ALIGNED_READS (%)<small>Global: Inf: 95.18, Sup: 98.71</small></td><td title='Valeur conforme' style='background-color:white;'>97.3</td><td title='Valeur conforme' style='background-color:white;'>98.7</td><td title='Valeur conforme' style='background-color:white;'>98.7</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of exon bases with 100X coverage' style='background-color:#CCFFFF'>PCT_EXON_100X (%)<small>Global: Inf: 15.56, Sup: 99.70</small></td><td title='Valeur conforme' style='background-color:white;'>99.0</td><td title='Valeur conforme' style='background-color:white;'>99.6</td><td title='Valeur conforme' style='background-color:white;'>99.5</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Estimated contamination percentage' style='background-color:#CCFFFF'>PCT_CONTAMINATION_EST (%)<small>Global: Inf: 0.00, Sup: 40.45</small></td><td title='Valeur conforme' style='background-color:white;'>25.2</td><td title='Valeur conforme' style='background-color:white;'>1.2</td><td title='Valeur conforme' style='background-color:white;'>25.8</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Average percentage of bases ≥ Q30' style='background-color:#CCFFFF'>PCT_Q30_BASES (%)<small>Global: Inf: 82.57, Sup: 89.59</small></td><td title='Valeur conforme' style='background-color:white;'>89.41</td><td title='Valeur conforme' style='background-color:white;'>89.4</td><td title='Valeur au-dessus du seuil moyen supérieur du groupe (89.59)' style='position: relative;'>89.6<span class='green-circle'></span></td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of bases soft-clipped during alignement' style='background-color:#E5CCFF'>PCT_SOFT_CLIPPED_BASES (%)<small>Global: Inf: 2.17, Sup: 19.68</small></td><td title='Valeur conforme' style='background-color:white;'>2.97</td><td title='Valeur conforme' style='background-color:white;'>2.52</td><td title='Valeur conforme' style='background-color:white;'>2.94</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Median coverage depth per gene' style='background-color:#E5CCFF'>GENE_MEDIAN_COVERAGE (Count)<small>Global: Inf: 0.09, Sup: 1398.60</small></td><td title='Valeur conforme' style='background-color:white;'>1172.47</td><td title='Valeur conforme' style='background-color:white;'>1120.58</td><td title='Valeur conforme' style='background-color:white;'>1048.29</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Average percentage of RNA bases ≥ Q30' style='background-color:#E5CCFF'>RNA_PCT_Q30_BASES (%)<small>Global: Inf: 47.78, Sup: 90.72</small></td><td title='Valeur conforme' style='background-color:white;'>90.61</td><td title='Valeur au-dessus du seuil moyen supérieur du groupe (90.72)' style='position: relative;'>91.87<span class='green-circle'></span></td><td title='Valeur au-dessus du seuil moyen supérieur du groupe (90.72)' style='position: relative;'>90.98<span class='green-circle'></span></td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Number of genes above median coverage cutoff' style='background-color:#E5CCFF'>GENE_ABOVE_MEDIAN_CUTOFF (Count)<small>Global: Inf: 0.00, Sup: 56.00</small></td><td title='Valeur conforme' style='background-color:white;'>51.0</td><td title='Valeur conforme' style='background-color:white;'>47.0</td><td title='Valeur conforme' style='background-color:white;'>49.0</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of reads alignées en deux parties' style='background-color:#E5CCFF'>PCT_CHIMERIC_READS (%)<small>Global: Inf: 0.14, Sup: 3.99</small></td><td title='Valeur conforme' style='background-color:white;'>0.46</td><td title='Valeur conforme' style='background-color:white;'>0.38</td><td title='Valeur conforme' style='background-color:white;'>0.58</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Percentage of reads on target' style='background-color:#E5CCFF'>PCT_ON_TARGET_READS (%)<small>Global: Inf: 3.91, Sup: 91.36</small></td><td title='Valeur conforme' style='background-color:white;'>88.4</td><td title='Valeur conforme' style='background-color:white;'>90.9</td><td title='Valeur conforme' style='background-color:white;'>87.9</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Scaled median coverage par gène' style='background-color:#E5CCFF'>SCALED_MEDIAN_GENE_COVERAGE (Count)<small>Global: Inf: 0.18, Sup: 5608.16</small></td><td title='Valeur conforme' style='background-color:white;'>5108.6</td><td title='Valeur conforme' style='background-color:white;'>5435.2</td><td title='Valeur conforme' style='background-color:white;'>4275.2</td><td title='Pas de donnée'>NA</td></tr><tr><td class='metric-name' title='Total number of reads passing filter' style='background-color:#E5CCFF'>TOTAL_PF_READS (Count)<small>Global: Inf: 13478754.40, Sup: 149998014.90</small></td><td title='Valeur conforme' style='background-color:white;'>26255172.0</td><td title='Valeur conforme' style='background-color:white;'>28771414.0</td><td title='Valeur conforme' style='background-color:white;'>25457316.0</td><td title='Pas de donnée'>NA</td></tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Container fixe pour la légende et l'en-tête cloné en haut -->
+    <div id="fixed-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <!-- Le contenu sera cloné via JavaScript -->
+    </div>
+    
+    <!-- Container fixe en bas -->
+    <div id="bottom-info">
+        <p><strong>Indicateurs :</strong></p>
+        <ul>
+            <li><span class="green-circle" style="position: static;"></span> Valeur au-dessus du seuil moyen supérieur du groupe.</li>
+            <li style="color: red;">Rouge : Indique une valeur non conforme (inférieure ou supérieure au seuil défini).</li>
+        </ul>
+        <p><strong>Groupe :</strong> Ensemble des fichiers MetricsOutput des runs passés au TSO500 mis ensemble pour calculer des seuils pour les métriques sans seuils fixés par Illumina.</p>
+    </div>
+    
+    <script>
+        function updateTableContainerPadding() {
+            var bottomInfo = document.getElementById('bottom-info');
+            var bottomHeight = bottomInfo.offsetHeight;
+            // Définir le padding-bottom du conteneur de la table pour que le bas du contenu ne soit pas recouvert
+            document.querySelector('.table-container').style.paddingBottom = (bottomHeight + 20) + "px";
+        }
+
+        window.addEventListener('load', function() {
+            // Cloner la légende et l'en-tête du tableau
+            var legendOriginal = document.querySelector('.legend');
+            var legendClone = legendOriginal.cloneNode(true);
+            var table = document.querySelector('.table-container table');
+            var theadOriginal = table.querySelector('thead');
+            var theadClone = theadOriginal.cloneNode(true);
+            
+            // Créer un conteneur pour le tableau en-tête cloné
+            var tableCloneContainer = document.createElement('div');
+            tableCloneContainer.style.overflow = "hidden";
+            var clonedTable = document.createElement('table');
+            clonedTable.style.borderCollapse = "collapse";
+            clonedTable.style.width = table.offsetWidth + "px";
+            clonedTable.appendChild(theadClone);
+            tableCloneContainer.appendChild(clonedTable);
+
+            // Synchroniser la largeur des cellules
+            var originalThs = theadOriginal.querySelectorAll("th");
+            var clonedThs = theadClone.querySelectorAll("th");
+            for (var i = 0; i < originalThs.length; i++) {
+                var width = window.getComputedStyle(originalThs[i]).width;
+                clonedThs[i].style.width = width;
+            }
+
+            var fixedHeader = document.getElementById('fixed-header');
+            fixedHeader.appendChild(legendClone);
+            fixedHeader.appendChild(tableCloneContainer);
+
+            updateTableContainerPadding();
+        });
+
+        window.addEventListener('resize', updateTableContainerPadding);
+    </script>
+</body>
+</html>
